@@ -1,1 +1,711 @@
-Hello World
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>pki.io | Scalable and open source X.509 certificate management</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+        <link rel="stylesheet" href="css/prism.css" />
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <style type="text/css">
+            #mc_embed_signup{background:#222222; clear:left; font:14px Helvetica,Arial,sans-serif;}
+      #mc_embed_signup .button {background: #27ae60;}
+      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-layers-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">pki.io</h1>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+							
+								Prologue's nav expects links in one of two formats:
+								
+								1. Hash link (scrolls to a different section within the page)
+								
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+							
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Welcome</span></a></li>
+								<li><a href="#release" id="release-link" class="skel-layers-ignoreHref"><span class="icon fa-flag">Release 1</span></a></li>
+								<li><a href="#benefits" id="benefits-link" class="skel-layers-ignoreHref"><span class="icon fa-heart">Benefits</span></a></li>
+								<li><a href="#gettingstarted" id="gettingstarted-link" class="skel-layers-ignoreHref"><span class="icon fa-coffee">Getting started</span></a></li>
+								<li><a href="#downloads" id="downloads-link" class="skel-layers-ignoreHref"><span class="icon fa-download">Downloads</span></a></li>
+								<li><a href="#documentation" id="documentation-link" class="skel-layers-ignoreHref"><span class="icon fa-align-left">Documentation</span></a></li>
+								<li><a href="#security" id="security-link" class="skel-layers-ignoreHref"><span class="icon fa-bug">Security</span></a></li>
+								<li><a href="#howitworks" id="howitworks-link" class="skel-layers-ignoreHref"><span class="icon fa-gears">How it works</span></a></li>
+								<li><a href="#community" id="community-link" class="skel-layers-ignoreHref"><span class="icon fa-users">Community &amp; Support</span></a></li>
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+				
+				</div>
+			
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+                            <h1 class="alt">Make network <strong>encryption</strong><br/> your business as usual</h1>
+                            <p>pki.io provides scalable, open source X.509 certificate management</p>
+							</header>
+							
+
+						</div>
+					</section>
+					
+				<!-- Release -->
+					<section id="release" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Release 1 is here!</h2>
+							</header>
+							
+                            <p>We are excited to announce the first alpha release of pki.io. Although there is still a lot of work to do before Version 1.0, this release marks the beginning of ...</p>
+
+                            <p>Release 1 allows you to work in the offline mode. You can manage your organisation, create CAs, manage offline nodes, export certificates etc. It should already be useful, but we advise against using it in production. Something something frequent iterations and releases. For the full roadmap, see the <a href="">Roadmap</a> wiki page.</p>
+
+                            <p>
+              <!-- Begin MailChimp Signup Form -->
+  <div id="mc_embed_signup" class="waitinglist">
+  <form action="http://pki.us8.list-manage.com/subscribe/post?u=e0478b81ffa22c83afe3bfe15&amp;id=fe919f2b15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+  <div class="mc-field-group">
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email address">
+  </div>
+    <div id="mce-responses" class="clear">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_e0478b81ffa22c83afe3bfe15_fe919f2b15" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Get notified of project updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+  </form>
+  </div>
+  <script type="text/javascript">
+  var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+  try {
+      var jqueryLoaded=jQuery;
+      jqueryLoaded=true;
+  } catch(err) {
+      var jqueryLoaded=false;
+  }
+  var head= document.getElementsByTagName('head')[0];
+  if (!jqueryLoaded) {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+      head.appendChild(script);
+      if (script.readyState && script.onload!==null){
+          script.onreadystatechange= function () {
+                if (this.readyState == 'complete') mce_preload_check();
+          }
+      }
+  }
+
+  var err_style = '';
+  try{
+      err_style = mc_custom_error_style;
+  } catch(e){
+      err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+  }
+  var head= document.getElementsByTagName('head')[0];
+  var style= document.createElement('style');
+  style.type= 'text/css';
+  if (style.styleSheet) {
+    style.styleSheet.cssText = err_style;
+  } else {
+    style.appendChild(document.createTextNode(err_style));
+  }
+  head.appendChild(style);
+  setTimeout('mce_preload_check();', 250);
+
+  var mce_preload_checks = 0;
+  function mce_preload_check(){
+      if (mce_preload_checks>40) return;
+      mce_preload_checks++;
+      try {
+          var jqueryLoaded=jQuery;
+      } catch(err) {
+          setTimeout('mce_preload_check();', 250);
+          return;
+      }
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+      head.appendChild(script);
+      try {
+          var validatorLoaded=jQuery("#fake-form").validate({});
+      } catch(err) {
+          setTimeout('mce_preload_check();', 250);
+          return;
+      }
+      mce_init_form();
+  }
+  function mce_init_form(){
+      jQuery(document).ready( function($) {
+        var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+        var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+        $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+        options = { url: 'http://pki.us8.list-manage.com/subscribe/post-json?u=e0478b81ffa22c83afe3bfe15&id=fe919f2b15&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                      beforeSubmit: function(){
+                          $('#mce_tmp_error_msg').remove();
+                          $('.datefield','#mc_embed_signup').each(
+                              function(){
+                                  var txt = 'filled';
+                                  var fields = new Array();
+                                  var i = 0;
+                                  $(':text', this).each(
+                                      function(){
+                                          fields[i] = this;
+                                          i++;
+                                      });
+                                  $(':hidden', this).each(
+                                      function(){
+                                          var bday = false;
+                                          if (fields.length == 2){
+                                              bday = true;
+                                              fields[2] = {'value':1970};//trick birthdays into having years
+                                          }
+                                        if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                          this.value = '';
+                        } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                          this.value = '';
+                        } else {
+                            if (/\[day\]/.test(fields[0].name)){
+                                                this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;
+                            } else {
+                                                this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+                                            }
+                                        }
+                                      });
+                              });
+                          $('.phonefield-us','#mc_embed_signup').each(
+                              function(){
+                                  var fields = new Array();
+                                  var i = 0;
+                                  $(':text', this).each(
+                                      function(){
+                                          fields[i] = this;
+                                          i++;
+                                      });
+                                  $(':hidden', this).each(
+                                      function(){
+                                          if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
+                                          this.value = '';
+                        } else {
+                            this.value = 'filled';
+                                        }
+                                      });
+                              });
+                          return mce_validator.form();
+                      },
+                      success: mce_success_cb
+                  };
+        $('#mc-embedded-subscribe-form').ajaxForm(options);
+
+
+      });
+  }
+  function mce_success_cb(resp){
+      $('#mce-success-response').hide();
+      $('#mce-error-response').hide();
+      if (resp.result=="success"){
+          $('#mce-'+resp.result+'-response').show();
+          $('#mce-'+resp.result+'-response').html(resp.msg);
+          $('#mc-embedded-subscribe-form').each(function(){
+              this.reset();
+        });
+      } else {
+          var index = -1;
+          var msg;
+          try {
+              var parts = resp.msg.split(' - ',2);
+              if (parts[1]==undefined){
+                  msg = resp.msg;
+              } else {
+                  i = parseInt(parts[0]);
+                  if (i.toString() == parts[0]){
+                      index = parts[0];
+                      msg = parts[1];
+                  } else {
+                      index = -1;
+                      msg = resp.msg;
+                  }
+              }
+          } catch(e){
+              index = -1;
+              msg = resp.msg;
+          }
+          try{
+              if (index== -1){
+                  $('#mce-'+resp.result+'-response').show();
+                  $('#mce-'+resp.result+'-response').html(msg);
+              } else {
+                  err_id = 'mce_tmp_error_msg';
+                  html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+
+                  var input_id = '#mc_embed_signup';
+                  var f = $(input_id);
+                  if (ftypes[index]=='address'){
+                      input_id = '#mce-'+fnames[index]+'-addr1';
+                      f = $(input_id).parent().parent().get(0);
+                  } else if (ftypes[index]=='date'){
+                      input_id = '#mce-'+fnames[index]+'-month';
+                      f = $(input_id).parent().parent().get(0);
+                  } else {
+                      input_id = '#mce-'+fnames[index];
+                      f = $().parent(input_id).get(0);
+                  }
+                  if (f){
+                      $(f).append(html);
+                      $(input_id).focus();
+                  } else {
+                      $('#mce-'+resp.result+'-response').show();
+                      $('#mce-'+resp.result+'-response').html(msg);
+                  }
+              }
+          } catch(e){
+              $('#mce-'+resp.result+'-response').show();
+              $('#mce-'+resp.result+'-response').html(msg);
+          }
+      }
+  }
+
+  </script>
+  <!--End mc_embed_signup-->
+  </p>
+
+  <p><h3>Warning!</h3></p>
+                        <p>This is an alpha release, so please take note of the following:</p>
+                        <ul class="default">
+                            <li>The code has not been audited yet</li>
+                            <li>It probably contains security flaws</li>
+                            <li>Offline mode only</li>
+                            <li>The code is also ugly and undocumented</li>
+                            <li>Test coverage is poor</li>
+                            <li>There are bugs</li>
+                            <li>Important features are missing</li>
+                            <li>Documentation is minimal</li>
+                            <li>Threat modelling has only just begun</li>
+                        </ul>
+						</div>
+					</section>
+
+			
+				<!-- Benefits -->
+					<section id="benefits" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Benefits</h2>
+							</header>
+                            <p>pki.io is an open source project that aims to make managing and deploying X.509 certificates easy and scalable.</p>
+                           <p>Protecting your internal traffic is essential, whether for compliance or simply following security best practices. pki.io is being designed to help you easily manage certificates for internal infrastructure traffic, SSL and IPSec VPN connections, intranet and operations services, as well as implement X.509 mutual authentication.</p>
+
+
+                        <div class="row center">
+                            <div class="4u">
+                                <div class="logo entypo-download"></div>
+                                <p class="step-text">Install the agent on your servers. Use tags to identify running services.</p>
+                            </div>
+                            <div class="4u">
+                                <div class="logo entypo-lock"></div>
+                                <p class="step-text">Create as many CAs as you need, for example one for each tagged service.</p>
+                            </div>
+                            <div class="4u">
+                                <div class="logo entypo-flow-tree"></div>
+                                <p class="step-text">Automatically sign and distribute certificates to your servers.</p>
+                            </div>
+                        </div>
+
+                            <h3>Easy</h3>
+                            <p>pki.io is designed to be easy to use thanks to sensible defaults, minimal configuration options and an intuitive command line interface.</p>
+                            <p><pre><code class="language-terminal">
+[admin@localhost ~]$ pki.io help ca
+Manages Certificate Authorities
+
+Usage:
+  pki.io ca [--help]
+  pki.io ca new &lt;name&gt; --tags &lt;tags&gt; [--ca-expiry &lt;days&gt;] [--cert-expiry &lt;days&gt;] [--dn-l &lt;locality&gt;] [--dn-st &lt;state&gt;] [--dn-o &lt;org&gt;] [--dn-ou &lt;orgUnit&gt;] [--dn-c &lt;country&gt;] [--dn-street &lt;street&gt;] [--dn-postal &lt;postalCode&gt;]
+  pki.io ca list
+  pki.io ca delete &lt;name&gt; --confirm-delete &lt;reason&gt;
+</code></pre></p>
+
+                            <h3>Secure</h3>
+                            <p>pki.io is designed to be secure, using existing trust relationships and standard crypto primitives.</p>
+                            <p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io pairing-key new --tags web,database
+Loading admin app
+Loading admin entity
+Loading org entity
+Creating the key
+Saving key to index
+Pairing ID: 70ddaa68f47de74fe04f308ada6c8db1
+Pairing key: 4eb44b2911fcbb7a40ba2d012c0bfaaf
+</code></pre></p>
+
+                            <h3>Scalable</h3>
+                            <p>pki.io is designed to scale from one server to thousands, from startups to enterprises.</p>
+                            <p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io node cert --name web01 --tags web --export - | ssh web01 'tar zxvf - -C /opt/pki.io'
+Loading admin app
+Loading admin entity
+Loading org entity
+Loading node app
+Loading node index
+Getting certs for tag: web
+Exporting
+</code></pre></p>
+
+						</div>
+					</section>
+			
+                    <!-- Getting started -->
+                    <section id="gettingstarted" class="two">
+                        <div class="container">
+                            <header><h2>Getting started</h2></header>
+
+                            <h3>Installing pki.io</h3>
+                            <p>In this example, we're going to install the pre-built binary for Linux. You can download distro packages and binaries for other platforms from the <a href="#downloads">Downloads</a> section.</p>
+<p><pre><code class="language-terminal">
+[admin@localhost ~]$ wget https://...
+[admin@localhost ~]$ gpg ...
+[admin@localhost ~]$ sudo tar zxvf pki.io-0.1.0-linux-amd64.tar.gz -C /opt/pki.io
+[admin@localhost ~]$ sudo ln -s /opt/pki.io/bin/pki.io /usr/local/bin
+</code></pre></p>
+                            <h3>Create an organisation (org)</h3>
+                            <p>pki.io organises everything by Organisation, referred here as Org. You might have an Org for your whole organisation, you different indepenedant teams might manage their own Orgs. All commands are run inside an Org directory, so lets create an Org.
+<p><pre><code class="language-terminal">
+[admin@localhost ~]$ pki.io init my-org
+Creating Admin entity
+Generating admin keys
+Creating Org entity
+Generating Org keys
+Saving local admin
+Saving public admin
+Creating org index
+Saving org public entity to home
+[admin@localhost ~]$ cd my-org/
+[admin@localhost my-org]$ 
+</code></pre></p>
+                            <h3>CA and standalone certificates</h3>
+                            <p>As pki.io is designed to manage X.509 infrastructure, we obviously need to be able to create Certificate Authorities (CAs). We also need to be able to create certificates, which can be done in one of two ways. Firstly, we can create standalone certificates that aren't attached to any particular server or machine. Once these are created they aren't tracked by the system. The primary way to create certificates is to create a node which will generate Certificate Signing Requests to be signed by a CA. We will do this below.</p>
+
+                            <p>First, lets create a CA.</p>
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io ca new web-root --tags web --dn-o pki.io --dn-ou webops
+Loading admin app
+Loading admin entity
+Loading org entity
+Saving CA
+Updating index
+</code></pre></p>
+
+                            <p>We called the CA web-root, tagged it with <strong>web</strong> and gave a Distinguished Name organisation and organisational unit.</p>
+
+                            <p>Now we can create a standalone certificate.</p>
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io cert new test-web-1 --export test1.tar.gz --expiry 60 --ca web-root --dn-o pki.io --dn-ou web-test
+Loading admin app
+Loading admin entity
+Loading org entity
+Export to 'test1.tar.gz'
+</code></pre></p>
+
+                            <p>We called the certificate test-web-1, so that is what the Common Name will be set to. As standalone certs aren't tracked, they must be exported. We set an expiry of 60 days instead of the default 90 days. We then specified the CA that should sign it. Finally, we also specified DN values, but we used a different value for organisational unit. Here we used web-test, whereas the CA is webops.
+
+                            <p>We can now see  what files we've got by looking at the exported file.</p>
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ tar -tzf test1.tar.gz
+test-web-1-cacert.pem
+test-web-1-cert.pem
+test-web-1-key.pem
+</code></pre></p>
+                            <p>We can extract the certificate to stdout, and pass it straight to openssl to take a look.</p>
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ tar -zxOf test1.tar.gz test-web-1-cert.pem | openssl x509 -noout -subject -issuer -startdate -enddate
+subject= /O=pki.io/OU=web-test/CN=test-web-1
+issuer= /O=pki.io/OU=webops/CN=web-root
+notBefore=Apr  6 08:18:37 2015 GMT
+notAfter=Jun  5 08:18:37 2015 GMT
+</code></pre></p>
+
+                            <p>As you can see, the subject includes the DN elements specified, which differ slightly from the CA.</p>
+                            <h3>Node over SSH</h3>
+                            <p>You will eventually be able to run pki.io as service with agents running on servers or nodes. In the meantime, pki.io supports an offline mode that tracks nodes and certificates etc. and lets you export file. You can then distribute these files yourself. This is also useful for platforms that cannot run an agent, for example resource limited embedded systems.</p>
+                            <p>Before we can create a node, we need to create a pairing key. We will associate it with the <strong>web</strong> tag, which means in our case that it will be associated with the web-root CA.</p>
+                            <p>Creating a node in the offline mode follows the same flow as it does when running a full API service.</p>
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io pairing-key new --tags web
+Loading admin app
+Loading admin entity
+Loading org entity
+Creating the key
+Saving key to index
+Pairing ID: 70ddaa68f47de74fe04f308ada6c8db1
+Pairing key: 4eb44b2911fcbb7a40ba2d012c0bfaaf
+</code></pre></p>
+
+                            <p>The pairing key must be kept secret, so it should be distributed over an existing trusted channel. Because we're working in the offline mode, we don't need to distrubute it, but we do need to refer to it when creating the node.</p>
+
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io node new web01 --pairing-id 70ddaa68f47de74fe04f308ada6c8db1 --pairing-key 4eb44b2911fcbb7a40ba2d012c0bfaaf
+Loading admin app
+Loading admin entity
+Loading org entity
+Creating new node
+Generating node keys
+Encrypting node for org
+Pushing container to org
+Switching to node context
+Creating node index
+Creating node config
+Creating CSRs
+Generating CSRs
+...
+</code></pre></p>
+
+                            <p>We've created a node called web01 using the pairing id and key. The node generates encryption and signing keys, then pre-generates a batch of CSRs.</p>
+                            <p>At this point, the node has just created itself, but the Org doesn't know anything about it. We need the Org to get the node registration, verify it and sign CSRs as required.</p>
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io org run
+Loading admin app
+Loading admin entity
+Loading org entity
+Registering nodes
+Found 1 nodes to register
+Reading pairing key: 70ddaa68f47de74fe04f308ada6c8db1
+Verifying and decrypting node registration
+Adding node to index
+Encrypting and signing node for Org
+Looking for CAs for tag web
+Found CA 113162238499713286037804545916553267629
+Getting CSR for node
+Setting CSR name from node
+Getting CA
+Creating certificate
+Tagging cert
+Signing cert
+Pushing certificate to node
+Found 0 nodes to register
+</code></pre></p>
+                            <p>The Org has seen the node registration and has processed it. Because the node used a pairing key assocaited with the <strong>web</strong> tag, the Org has signed one of the CSRs with the web-root CA.
+
+                            <p>Now the node needs to get a copy of the certificate that the Org created for it. Because we're in the offline mode, we have to specify which node we would like to run the command for.</p>
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io node run --name web01
+Loading admin app
+Loading admin entity
+Loading org entity
+Loading node app
+Loading node index
+Processing certs
+Found 1 certs to process
+Found 0 certs to process
+Saving node index
+</code></pre></p>
+
+                            <p>The node has now processed the certificate, so we can take a look at it.</p>
+
+<p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io node cert --name web01 --tags web --export - | tar -zxOf - web01-cert.pem | openssl x509 -noout -subject -issuer -startdate -enddate
+Loading admin app
+Loading admin entity
+Loading org entity
+Loading node app
+Loading node index
+Getting certs for tag: web
+Exporting
+subject= /O=pki.io/OU=webops/CN=web01
+issuer= /O=pki.io/OU=webops/CN=web-root
+notBefore=Apr  6 08:20:48 2015 GMT
+notAfter=Jul  5 08:20:48 2015 GMT
+</code></pre></p>
+
+                            <p>Once again, we specify the name of the node we're working with. We also provide the tag <strong>web</strong> to limit the certificates we want to export. You can see a list of tags for the node using the <em>pki.io node show</em> command.</p>
+                        </div>
+                    </section>
+
+				<!-- Downloads -->
+					<section id="downloads" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Downloads</h2>
+							</header>
+
+                            <p>pki.io is available as source code, pre-built binaries and as packages for various platforms. It has been tested on Debian, OSX and FreeBSD.</p>
+
+                            <p>Downloads go here</p>
+						</div>
+					</section>
+
+                    <!-- Documentation -->
+                    <section id="documentation" class="two">
+                        <div class="container">
+                            <header><h2>Documentation</h2></header>
+
+                            <p>Further documentation can be found on the wiki.</p>
+                            <p>Guides available include:</p>
+                            <ul class="default">
+                                    <li>Building from source</li>
+                                    <li>Multiple admins using Git</li>
+                                    <li>...</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Security -->
+                    <section id="security" class="three">
+                        <div class="container">
+                            <header><h2>Security</h2></header>
+
+                            <header><h3>Overview</h3></header>
+                            <ul class="default">
+                                <li>Admins are trusted</li>
+                                <li>Re-uses existing trusted platforms and relationships</li>
+                                <li>API service for availability only, admins hold the keys to the kingdom</li>
+                                <li>Encrypt-then-MAC used for all secured data</li>
+                                <li>Group encryption with random AES key encrypted with each admin public key</li>
+                                <li>NIST P-256 ECIES and ECDSA by default, 2048 bit RSA alternative</li>
+                                <li>AES 256 for symmetric</li>
+                                <li>SHA-256 used for hashing where required</li>
+                                <li>PBKDF2 used for key expansion</li>
+                                <li>Secure PRNG</li>
+                                <li>128 bit random shared keys</li>
+                            </ul>
+
+                            <header><h3>Disclosure policy</h3></header>
+                            <ul class="default">
+                                <li>We prefer coordinated disclosure. If you find a security issue, please tell us.</li>
+                                <li>Send an email with as much detail as possible to <a href="mailto:security@pki.io">security@pki.io</a>.</li>
+                                <li>We will try to get back to you within 48 hours.</li>
+                                <li>We treat security bugs as our top priority, but we are an open source project with developers working in their spare time. We will coordinate realistic timelines with you.</li>
+                                <li>Credit can be given if desired. Please let us which know name or alias you would like us to use.</li>
+                            </ul>
+
+                            <header><h3>Threat modelling</h3></header>
+                            <p>We have started threat modelling pki.io, but this is also far from complete. For traditional component modelling we are using <a href="https://eopgame.herokuapp.com">Elevation of Privilege</a> and <a href="">STRIDE</a>. The model is available <a href="">here</a>.</p>
+                            <p>We are also experimenting with a code-level threat specification language to bridge the gap between model and code.</p>
+                            <p>A typical threat spec would look something like this:</p>
+                            <p><pre><code class="language-go">
+// ThreatSpec TMv0.1 for ExpandKey
+// Mitigates cryptography against Use of Password Hash With Insufficient Computational Effort (CWE-916) with PBKDF2 provided by standard package
+// Mitigates cryptography against Use of a One-Way Hash without a Salt (CWE-759) with salt create by function
+// Mitigates cryptography against Use of a One-Way Hash with a Predictable Salt (CWE-760) with salt created with good PRNG
+
+// ExpandKey is an opinionated helper function to cryptographically expand a key using a 128 bit salt and PBKDF2.
+// If the salt is of 0 length, it generates a new salt, and returns the expanded key and salt as byte arrays.
+//
+// A salt should only be provided as part of a decryption or verification process. When using ExpandKey to create a new key, let ExpandKey generate the salt. This is to lessen the risk of a weak or non-unique salt being used.
+func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
+...
+}
+</code></pre></p>
+                            <p>The generated report can be found here: <a href="https://github.com/pki-io/docs/wiki/ThreatSpec-TMv0.1">ThreatSpec-TMv0.1</a></p>
+
+                            <header><h3>Other documents</h3></header>
+                            <p>Other security related documentation can be found on the wiki</p>
+                        </div>
+                    </section>
+
+                    <section id="howitworks" class="two">
+                        <div class="container">
+                            <header><h2>How it works</h2></header>
+                            <p class="center">
+                                <img src="/images/basics.png"/>
+                            </p>
+                            <header><h4>Designed to work with...</h4></header>
+                            <p class="center"><img src="/images/logos.png"/></p>
+                            <header><h4>... and anything else that uses X.509 certificates</h4></header>
+
+                            <p class="center"><img src="/images/architecture_overview.png"/></p>
+
+                            <p>pki.io is made up of three main components. The agent that runs on client servers; admin users or an admin service; and an API service that glues everything together. The client agent is responsible for generating and uploading CSRs as well as downloading and deploying the certs. Admins can either be users or an admin service, and they look after the CAs and sign certs etc. All connections from the agents and admins are outbound to the API service which acts as temporary and persistent data storage. The API service and admin service are run active-active for High Availability.</p>
+                            <p class="center"><img src="/images/simple_service_hierarchy.png"></p>
+
+                            <p>The simplest way to use pki.io is using service CAs. For each service in your environment (e.g. web, database, vpn) you create a root CA which signs all client certificates. Each service CA private key is encrypted and signed by the Org entity. This protects the private data and only allows Org administrators to manage and use the CA. Using service CAs means we don't have to worry about CRLs or OCSP. In the event of a client compromise we can rotate out the CA keys, and regenerate and distribute all client certificates. A Root entity (coming in Release 2) is used to sign the Org entity keys and has its own private keys stored off line. In the event that the Org is compromised, it can be regenerated using the Root entity.</p>
+
+                            <p class="center"><img src="/images/service_hierarchy.png"></p>
+
+                            <p>pki.io also supports a more traditional approach to X.509. It still has a Root and Org entity. It can even have sub entities that still use service CAs (WebOps in the diagram). But in addition to this there is a org-level root CA. This is used to sign any required sub-CAs. In the example diagram there is a HR CA that is used to sign client certificates using add-on SCEP and OCSP services. This approach supports having administrators at different levels which helps isolate impact in the event of an admin compromise.</p>
+
+                            <p>All sensitive data (such as private keys) is encrypted and all data is authenticated using signatures. For example, if an admin creates a new CA, then they would encrypt the CA private key using something like AES, then the AES key would be encrypted using the Org's public encryption key, and the two would be combined and signed by the orgs private signing key. All three bits of information would be transported together.</p>
+
+                        </div>
+                    </section>
+
+                    <section id="community" class="three">
+                        <div class="container">
+                            <header><h2>Community &amp; Support</h2></header>
+                        </div>
+                    </section>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				
+			</div>
+
+        <script src="js/prism.js"></script>
+        <script src="js/prism-terminal.js"></script>
+	</body>
+</html>
