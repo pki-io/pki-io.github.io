@@ -20,6 +20,10 @@ div .logo {
   padding-bottom: 50px;
 }
 
+div .benefits {
+  margin-top: 100px;
+}
+
 @font-face {
     font-family: pki;
     src: url(/fonts/tenby-five.otf);
@@ -126,6 +130,7 @@ div .logo {
 
 		h3
 		{
+            margin-top: 100px;
 			font-size: 1.5em;
 		}
 
