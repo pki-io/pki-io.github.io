@@ -23,6 +23,7 @@
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
         <link rel="stylesheet" href="css/prism.css" />
+        <link rel="stylesheet" href="css/font-mfizz.css" />
         <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
@@ -117,6 +118,13 @@
                             <p>We are excited to announce the first alpha release of pki.io. Although there is still a lot of work to do before Version 1.0, this release marks the beginning of ...</p>
 
                             <p>Release 1 allows you to work in the offline mode. You can manage your organisation, create CAs, manage offline nodes, export certificates etc. It should already be useful, but we advise against using it in production. Something something frequent iterations and releases. For the full roadmap, see the <a href="">Roadmap</a> wiki page.</p>
+
+                            <header><h3>What is pki.io?</h3></header>
+                            <p>pki.io is an open source project that aims to make managing and deploying X.509 certificates easy and scalable.</p>
+                           <p>Protecting your internal traffic is essential, whether for compliance or simply following security best practices. pki.io is being designed to help you easily manage certificates for internal infrastructure traffic, SSL and IPSec VPN connections, intranet and operations services, as well as implement X.509 mutual authentication.</p>
+
+                           <header><h3>What about Let's Encrypt?</h3></header>
+                           <p>....</p>
 
                             <p>
               <!-- Begin MailChimp Signup Form -->
@@ -340,6 +348,7 @@
                             <li>Important features are missing</li>
                             <li>Documentation is minimal</li>
                             <li>Threat modelling has only just begun</li>
+                            <li>No signed packages yet</li>
                         </ul>
 						</div>
 					</section>
@@ -352,8 +361,6 @@
 							<header>
 								<h2>Benefits</h2>
 							</header>
-                            <p>pki.io is an open source project that aims to make managing and deploying X.509 certificates easy and scalable.</p>
-                           <p>Protecting your internal traffic is essential, whether for compliance or simply following security best practices. pki.io is being designed to help you easily manage certificates for internal infrastructure traffic, SSL and IPSec VPN connections, intranet and operations services, as well as implement X.509 mutual authentication.</p>
 
 
                         <div class="row center benefits">
@@ -372,7 +379,7 @@
                         </div>
 
                             <h3>Save time</h3>
-                            <p>pki.io is designed to be fast and easy to use thanks to sensible defaults, minimal configuration options and an intuitive command line interface.</p>
+                            <p>Fast and easy to use thanks to sensible defaults, minimal configuration options and an intuitive command line interface.</p>
                             <p><pre><code class="language-terminal">
 [admin@localhost ~]$ pki.io help ca
 Manages Certificate Authorities
@@ -385,7 +392,7 @@ Usage:
 </code></pre></p>
 
                             <h3>Improve security</h3>
-                            <p>pki.io is designed to be secure, using existing trust relationships and standard crypto primitives.</p>
+                            <p>Re-uses existing trust relationships and standard crypto primitives.</p>
                             <p><pre><code class="language-terminal">
 [admin@localhost my-org]$ pki.io pairing-key new --tags web,database
 Loading admin app
@@ -398,7 +405,7 @@ Pairing key: 4eb44b2911fcbb7a40ba2d012c0bfaaf
 </code></pre></p>
 
                             <h3>Keep growing</h3>
-                            <p>pki.io is designed to scale from one server to thousands, from startups to enterprises.</p>
+                            <p>Scales with you, from one server to thousands, from startups to enterprises.</p>
                             <p><pre><code class="language-terminal">
 [admin@localhost my-org]$ pki.io node cert --name web01 --tags web --export - | ssh web01 'tar zxvf - -C /opt/pki.io'
 Loading admin app
@@ -410,9 +417,9 @@ Getting certs for tag: web
 Exporting
 </code></pre></p>
 
-                            <header><h4>Designed to work with...</h4></header>
+                            <header><h3>Works with...</h3></header>
                             <p class="center"><img src="/images/logos.png"/></p>
-                            <header><h4>... and anything else that uses X.509 certificates</h4></header>
+                            <header class="right"><h3>... and anything else that uses X.509 certificates</h3></header>
 
 						</div>
 					</section>
@@ -431,7 +438,7 @@ Exporting
 [admin@localhost ~]$ sudo ln -s /opt/pki.io/bin/pki.io /usr/local/bin
 </code></pre></p>
                             <h3>Create an organisation (org)</h3>
-                            <p>pki.io organises everything by Organisation, referred here as Org. You might have an Org for your whole organisation, you different indepenedant teams might manage their own Orgs. All commands are run inside an Org directory, so lets create an Org.
+                            <p>pki.io organises everything by Organisation, referred here as Org. You might have an Org for your whole organisation, or different indepenedant teams might manage their own Orgs. All commands are run inside an Org directory, so lets create an one.
 <p><pre><code class="language-terminal">
 [admin@localhost ~]$ pki.io init my-org
 Creating Admin entity
@@ -446,7 +453,7 @@ Saving org public entity to home
 [admin@localhost my-org]$ 
 </code></pre></p>
                             <h3>CA and standalone certificates</h3>
-                            <p>As pki.io is designed to manage X.509 infrastructure, we obviously need to be able to create Certificate Authorities (CAs). We also need to be able to create certificates, which can be done in one of two ways. Firstly, we can create standalone certificates that aren't attached to any particular server or machine. Once these are created they aren't tracked by the system. The primary way to create certificates is to create a node which will generate Certificate Signing Requests to be signed by a CA. We will do this below.</p>
+                            <p>As pki.io is designed to manage X.509 infrastructure, we obviously need to be able to create Certificate Authorities (CAs). We also need to be able to create certificates, which can be done in one of two ways. Firstly, we can create standalone certificates that aren't attached to any particular server or machine. Once these are created they aren't tracked by the system. The primary way to create certificates is to create a node which will generate Certificate Signing Requests to be signed by a CA. We will do this later.</p>
 
                             <p>First, lets create a CA.</p>
 <p><pre><code class="language-terminal">
@@ -584,6 +591,7 @@ notAfter=Jul  5 08:20:48 2015 GMT
                     </section>
 
 				<!-- Downloads -->
+                <!-- <i class="icon-mfizz"></i>  -->
 					<section id="downloads" class="three">
 						<div class="container">
 
@@ -593,7 +601,27 @@ notAfter=Jul  5 08:20:48 2015 GMT
 
                             <p>pki.io is available as source code, pre-built binaries and as packages for various platforms. It has been tested on Debian, OSX and FreeBSD.</p>
 
-                            <p>Downloads go here</p>
+                                <div class="row center downloads">
+                                    <div class="3u">
+                                        <a href=""><i class="logo icon-osx"></i></a>
+                                        <p><a href="">Mac OS X</a></p>
+                                    </div>
+                                    <div class="3u">
+                                        <a href=""><i class="logo icon-ubuntu"></i></a>
+                                        <p><a href="">Ubuntu / Debian</a></p>
+                                    </div>
+                                    <div class="3u">
+                                        <a href=""><i class="logo icon-redhat"></i></a>
+                                        <p><a href="">Red Hat Enterprise Linux</a></p>
+                                    </div>
+                                    <div class="3u">
+                                        <a href=""><i class="logo icon-freebsd"></i></a>
+                                        <p><a href="">FreeBSD</a></p>
+                                    </div>
+                                </div>
+
+
+                            <p>All other downloads are available <a href="">on GitHub</a></p>
 						</div>
 					</section>
 
@@ -637,7 +665,7 @@ notAfter=Jul  5 08:20:48 2015 GMT
                                 <li>We prefer coordinated disclosure. If you find a security issue, please tell us.</li>
                                 <li>Send an email with as much detail as possible to <a href="mailto:security@pki.io">security@pki.io</a>.</li>
                                 <li>We will try to get back to you within 48 hours.</li>
-                                <li>We treat security bugs as our top priority, but we are an open source project with developers working in their spare time. We will coordinate realistic timelines with you.</li>
+                                <li>We treat security bugs as our top priority, but we are an open source project with developers working in their spare time, so we will coordinate realistic timelines with you.</li>
                                 <li>Credit can be given if desired. Please let us which know name or alias you would like us to use.</li>
                             </ul>
 
@@ -692,6 +720,32 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
                     <section id="community" class="three">
                         <div class="container">
                             <header><h2>Community &amp; Support</h2></header>
+
+                            <p>If you're having a problem and need some help, get in touch:</p>
+                            <ul class="default">
+                                <li><a href="">Gitter Chat</a></li>
+                                <li>#pki.io on FreeNode</li>
+                                <li>Post to the <a href="">mailing list</a></li>
+                                <li>Drop an email to <a href="mailto:hello@pki.io">hello@pki.io</a></li>
+                                <li>Tweet us at <a href="">@pki_io</a></li>
+                            </ul>
+
+                            <p class="center"><img src="/images/pki-heart-prs-small.png"/></p>
+                            <header><h3>Want to help?</h3></header>
+                            <p>Here is a list of things you could possibly help us with:</p>
+                            <ul class="default">
+                                <li>Development</li>
+                                <li>Code audit</li>
+                                <li>Security testing</li>
+                                <li>Documentation writing</li>
+                                <li>Threat modelling</li>
+                                <li>Site design and copy</li>
+                            </ul>
+
+                            <header><h4>... or just tell us what you think :)</h4></header>
+
+                            <p>The source code is available on <a href="">GitHub</a>.</p>
+
                         </div>
                     </section>
 			</div>

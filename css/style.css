@@ -20,6 +20,16 @@ div .logo {
   padding-bottom: 50px;
 }
 
+div .downloads {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+div.downloads div > a {
+    border-bottom: none 0px;
+}
+
 div .benefits {
   margin-top: 100px;
 }
@@ -219,6 +229,10 @@ div .benefits {
     .center
     {
             text-align: center;
+    }
+
+    .right {
+        text-align: right;
     }
 
 	/* Sections/Article */
