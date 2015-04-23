@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>pki.io | Scalable and open source X.509 certificate management</title>
+		<title>pki.io | Scalable, open source X.509 certificate management</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -80,11 +80,10 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://twitter.com/home?status=http://pki.io%20-%20Scalable%20,%20open%20source%20X.509%20certificate%20management." class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://pki.io" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/pki-io/pki-io" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:hello@pki.io" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 				
 				</div>
@@ -115,16 +114,20 @@
 								<h2>Release 1 is here!</h2>
 							</header>
 							
-                            <p>We are excited to announce the first alpha release of pki.io. Although there is still a lot of work to do before Version 1.0, this release marks the beginning of ...</p>
+                            <p>We are excited to announce the first alpha release of pki.io.</p>
 
-                            <p>Release 1 allows you to work in the offline mode. You can manage your organisation, create CAs, manage offline nodes, export certificates etc. It should already be useful, but we advise against using it in production. Something something frequent iterations and releases. For the full roadmap, see the <a href="">Roadmap</a> wiki page.</p>
+                            <p>Release 1 allows you to work in the offline mode. You can manage your organisation, create CAs, manage offline nodes, export certificates etc. It should already be useful, but we advise against using it in production. We have now started working on Release 2 which will allow you to generate private keys the servers, with data exchanged over SSH. For the full roadmap, see the <a href="https://github.com/pki-io/pki-io/wiki/Road-Map">Roadmap</a> wiki page.</p>
 
                             <header><h3>What is pki.io?</h3></header>
                             <p>pki.io is an open source project that aims to make managing and deploying X.509 certificates easy and scalable.</p>
                            <p>Protecting your internal traffic is essential, whether for compliance or simply following security best practices. pki.io is being designed to help you easily manage certificates for internal infrastructure traffic, SSL and IPSec VPN connections, intranet and operations services, as well as implement X.509 mutual authentication.</p>
 
+                            <p class="center"><img src="/images/without-with.png"/></p>
+
                            <header><h3>What about Let's Encrypt?</h3></header>
-                           <p>....</p>
+                           <p>Although there is some overlap, at the moment the two projects are focused on different things.</p>
+                           <p>Let's Encrypt is currently being built to enable Internet-wide encryption of web traffic. They will be running a CA and most people will automatically rollout domain validated certificates from that CA. Having said that, the ACME protocol can be extended for other purposes.</p>
+                           <p>pki.io is primarily aimed at infrastructure TLS, for example encrypting between an application server and a database server. You run one or more internal CAs specific to your organisation.</p>
 
                             <p>
               <!-- Begin MailChimp Signup Form -->
@@ -438,7 +441,7 @@ Exporting
 [admin@localhost ~]$ sudo ln -s /opt/pki.io/bin/pki.io /usr/local/bin
 </code></pre></p>
                             <h3>Create an organisation (org)</h3>
-                            <p>pki.io organises everything by Organisation, referred here as Org. You might have an Org for your whole organisation, or different indepenedant teams might manage their own Orgs. All commands are run inside an Org directory, so lets create an one.
+                            <p>pki.io organises everything by Organisation, referred here as Org. You might have an Org for your whole organisation, or different independent teams might manage their own Orgs. All commands are run inside an Org directory, so lets create an one.
 <p><pre><code class="language-terminal">
 [admin@localhost ~]$ pki.io init my-org
 Creating Admin entity
@@ -510,7 +513,7 @@ Pairing ID: 70ddaa68f47de74fe04f308ada6c8db1
 Pairing key: 4eb44b2911fcbb7a40ba2d012c0bfaaf
 </code></pre></p>
 
-                            <p>The pairing key must be kept secret, so it should be distributed over an existing trusted channel. Because we're working in the offline mode, we don't need to distrubute it, but we do need to refer to it when creating the node.</p>
+                            <p>The pairing key must be kept secret, so it should be distributed over an existing trusted channel. Because we're working in the offline mode, we don't need to distribute it, but we do need to refer to it when creating the node.</p>
 
 <p><pre><code class="language-terminal">
 [admin@localhost my-org]$ pki.io node new web01 --pairing-id 70ddaa68f47de74fe04f308ada6c8db1 --pairing-key 4eb44b2911fcbb7a40ba2d012c0bfaaf
@@ -553,7 +556,7 @@ Signing cert
 Pushing certificate to node
 Found 0 nodes to register
 </code></pre></p>
-                            <p>The Org has seen the node registration and has processed it. Because the node used a pairing key assocaited with the <strong>web</strong> tag, the Org has signed one of the CSRs with the web-root CA.
+                            <p>The Org has seen the node registration and has processed it. Because the node used a pairing key associated with the <strong>web</strong> tag, the Org has signed one of the CSRs with the web-root CA.
 
                             <p>Now the node needs to get a copy of the certificate that the Org created for it. Because we're in the offline mode, we have to specify which node we would like to run the command for.</p>
 <p><pre><code class="language-terminal">
@@ -621,7 +624,7 @@ notAfter=Jul  5 08:20:48 2015 GMT
                                 </div>
 
 
-                            <p>All other downloads are available <a href="">on GitHub</a></p>
+                            <p>All other downloads are available on <a href="">GitHub</a></p>
 						</div>
 					</section>
 
@@ -630,12 +633,11 @@ notAfter=Jul  5 08:20:48 2015 GMT
                         <div class="container">
                             <header><h2>Documentation</h2></header>
 
-                            <p>Further documentation can be found on the wiki.</p>
-                            <p>Guides available include:</p>
+                            <p>Further documentation can be found on <a href="https://github.com/pki-io/pki-io">GitHub</a>.</p>
+                            <p>Wiki guides available include:</p>
                             <ul class="default">
-                                    <li>Building from source</li>
-                                    <li>Multiple admins using Git</li>
-                                    <li>...</li>
+                                    <li><a href="https://github.com/pki-io/admin">Building from source</a></li>
+                                    <li><a href="https://github.com/pki-io/pki-io/wiki/Multi-admin-example">Multiple admins using Git</a></li>
                             </ul>
                         </div>
                     </section>
@@ -670,7 +672,7 @@ notAfter=Jul  5 08:20:48 2015 GMT
                             </ul>
 
                             <header><h3>Threat modelling</h3></header>
-                            <p>We have started threat modelling pki.io, but this is also far from complete. For traditional component modelling we are using <a href="https://eopgame.herokuapp.com">Elevation of Privilege</a> and <a href="">STRIDE</a>. The model is available <a href="">here</a>.</p>
+                            <p>We have started threat modelling pki.io, but this is also far from complete. For traditional component modelling we are using <a href="https://eopgame.herokuapp.com">Elevation of Privilege</a> and <a href="https://msdn.microsoft.com/en-us/library/ee823878%28v=cs.20%29.aspx">STRIDE</a>. The model is available <a href="https://github.com/pki-io/pki-io/wiki/EoP-Threat-Model-Game-1">here</a>.</p>
                             <p>We are also experimenting with a code-level threat specification language to bridge the gap between model and code.</p>
                             <p>A typical threat spec would look something like this:</p>
                             <p><pre><code class="language-go">
@@ -690,7 +692,7 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
                             <p>The generated report can be found here: <a href="https://github.com/pki-io/docs/wiki/ThreatSpec-TMv0.1">ThreatSpec-TMv0.1</a></p>
 
                             <header><h3>Other documents</h3></header>
-                            <p>Other security related documentation can be found on the wiki</p>
+                            <p>Other security related documentation can be found on the wiki.</p>
                         </div>
                     </section>
 
@@ -712,8 +714,6 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
 
                             <p>pki.io also supports a more traditional approach to X.509. It still has a Root and Org entity. It can even have sub entities that still use service CAs (WebOps in the diagram). But in addition to this there is a org-level root CA. This is used to sign any required sub-CAs. In the example diagram there is a HR CA that is used to sign client certificates using add-on SCEP and OCSP services. This approach supports having administrators at different levels which helps isolate impact in the event of an admin compromise.</p>
 
-                            <p>All sensitive data (such as private keys) is encrypted and all data is authenticated using signatures. For example, if an admin creates a new CA, then they would encrypt the CA private key using something like AES, then the AES key would be encrypted using the Org's public encryption key, and the two would be combined and signed by the orgs private signing key. All three bits of information would be transported together.</p>
-
                         </div>
                     </section>
 
@@ -723,16 +723,16 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
 
                             <p>If you're having a problem and need some help, get in touch:</p>
                             <ul class="default">
-                                <li><a href="">Gitter Chat</a></li>
+                                <li><a href="https://gitter.im/pki-io/pki-io?">Gitter Chat</a></li>
                                 <li>#pki.io on FreeNode</li>
-                                <li>Post to the <a href="">mailing list</a></li>
+                                <li>Post to the <a href="https://groups.google.com/forum/#!forum/pki_io">mailing list</a></li>
                                 <li>Drop an email to <a href="mailto:hello@pki.io">hello@pki.io</a></li>
-                                <li>Tweet us at <a href="">@pki_io</a></li>
+                                <li>Tweet us at <a href="https://twitter.com/pki_io">@pki_io</a></li>
                             </ul>
 
                             <p class="center"><img src="/images/pki-heart-prs-small.png"/></p>
-                            <header><h3>Want to help?</h3></header>
-                            <p>Here is a list of things you could possibly help us with:</p>
+                            <header><h3>We need your help</h3></header>
+                            <p>If you would like to help, here is a list of things you could possibly help us with:</p>
                             <ul class="default">
                                 <li>Development</li>
                                 <li>Code audit</li>
@@ -744,7 +744,7 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
 
                             <header><h4>... or just tell us what you think :)</h4></header>
 
-                            <p>The source code is available on <a href="">GitHub</a>.</p>
+                            <p>The source code is available on <a href="https://github.com/pki-io/pki-io">GitHub</a>.</p>
 
                         </div>
                     </section>
@@ -755,7 +755,7 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
 				
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            <li>&copy; pki.io All rights reserved.</li><li><a href="">Privacy</a></li><li><a href="">Credits</a></li>
 					</ul>
 				
 			</div>
