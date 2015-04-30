@@ -100,36 +100,8 @@
 							<header>
                             <h1 class="alt">Make network <strong>encryption</strong><br/> your business as usual</h1>
                             <p>Scalable, open source X.509 certificate management</p>
-							</header>
-							
-
-						</div>
-					</section>
-					
-				<!-- Release -->
-					<section id="release" class="two">
-						<div class="container">
-					
-							<header>
-								<h2>Release 1 is here!</h2>
-							</header>
-							
-                            <p>We are excited to announce the first alpha release of pki.io.</p>
-
-                            <p>Release 1 allows you to work in the offline mode. You can manage your organisation, create CAs, manage offline nodes, and export certificates etc. It should already be quite useful, but we advise against using it in production. We have now started working on Release 2 which will allow you to remotely generate keys on the servers over SSH. For the full roadmap, see the <a href="https://github.com/pki-io/pki-io/wiki/Road-Map">Roadmap</a> wiki page.</p>
-
-                            <header><h3>What is pki.io?</h3></header>
-                            <p>pki.io is an open source project that aims to make managing and deploying X.509 certificates easy and scalable.</p>
-                           <p>Protecting your internal traffic is essential, whether for compliance or simply following security best practices. pki.io is being designed to help you easily manage certificates for internal infrastructure traffic, SSL and IPSec VPN connections, intranet and operations services, as well as implement X.509 mutual authentication.</p>
-
-                            <p class="center"><img src="/images/without-with.png"/></p>
-
-                           <header><h3>What about Let's Encrypt?</h3></header>
-                           <p>Although there is some overlap, at the moment the two projects are focused on different things.</p>
-                           <p><a href="https://letsencrypt.org/">Let's Encrypt</a> is currently being built to enable Internet-wide encryption of end-user web traffic. They will be running a CA and most people will automatically rollout domain validated certificates from that CA. Having said that, the <a href="https://github.com/letsencrypt/acme-spec">ACME</a> protocol can be extended for other purposes.</p>
-                           <p>pki.io is primarily aimed at infrastructure TLS, for example encrypting between an application server and a database server. You run one or more internal CAs specific to your organisation.</p>
-
                             <p>
+                            <br/><br/>
               <!-- Begin MailChimp Signup Form -->
   <div id="mc_embed_signup" class="waitinglist">
   <form action="http://pki.us8.list-manage.com/subscribe/post?u=e0478b81ffa22c83afe3bfe15&amp;id=fe919f2b15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -338,6 +310,32 @@
   </script>
   <!--End mc_embed_signup-->
   </p>
+
+							</header>
+							
+
+						</div>
+					</section>
+					
+				<!-- Release -->
+					<section id="release" class="two">
+						<div class="container">
+					
+                            <header>
+                            <h1 class="center">pki.io is an open source project that aims to make managing and deploying X.509 certificates easy and scalable.</h1>
+                            </header>
+
+							<header>
+								<h2>Release 1 is here!</h2>
+							</header>
+							
+                            <p>We are excited to announce the first alpha release of pki.io.</p>
+
+                            <p>Release 1 allows you to work in the offline mode, creating CAs and certificates with ease. While already useful, we advise against using this release in production. We are working on Release 2, which will allow you to remotely generate keys on the servers over SSH. For more on future releases, see the <a href="https://github.com/pki-io/pki-io/wiki/Road-Map">Roadmap</a> wiki page.</p>
+
+                           <p>Protecting your internal traffic is essential, whether for compliance or simply following security best practices. With pki.io you can easily manage certificates for internal infrastructure traffic, SSL and IPSec VPN connections, intranet and operations services, as well as implement X.509 mutual authentication.</p>
+
+                            <p class="center"><img src="/images/without-with.png"/></p>
 
   <p><h3>Warning!</h3></p>
                         <p>This is an alpha release, so please take note of the following:</p>
@@ -733,7 +731,7 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
 
                             <p class="center"><img src="/images/pki-heart-prs-small.png"/></p>
                             <header><h3>We need your help</h3></header>
-                            <p>If you would like to help, here is a list of things you could possibly help us with:</p>
+                            <p>Here is a list of things you could possibly help us with:</p>
                             <ul class="default">
                                 <li>Development</li>
                                 <li>Code audit</li>
@@ -756,7 +754,7 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
 				
 				<!-- Copyright -->
 					<ul class="copyright">
-                            <li>&copy; pki.io All rights reserved.</li><li><a href="">Privacy</a></li><li><a href="https://github.com/pki-io/pki-io/wiki/Credits">Credits</a></li>
+                            <li>&copy; pki.io All rights reserved.</li><li><a href="/privacy.txt">Privacy</a></li><li><a href="https://github.com/pki-io/pki-io/wiki/Credits">Credits</a></li>
 					</ul>
 				
 			</div>

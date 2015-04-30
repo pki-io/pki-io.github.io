@@ -78,7 +78,7 @@ div .benefits {
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: #666;
 	}
 
     h1,h2 {
@@ -93,17 +93,18 @@ div .benefits {
 	h1,h2,h3,h4,h5,h6
 	{
 		font-weight: 300;
-		color: #666;
+		color: #27ae60;
 		line-height: 1.5em;
 	}
         h1
         {
-            font-size: 3em;
+            font-size: 2em;
+			color: #888;
         }
 	
 			h1.alt
 			{
-				color: #888;
+                font-size: 3em;
 			}
 			
 			h1.alt strong
@@ -126,6 +127,7 @@ div .benefits {
 			font-size: 3em;
             color: #27ae60;
             font-family: pki;
+            margin-top: 100px;
 		}
 		
 			h2.alt
