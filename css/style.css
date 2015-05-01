@@ -119,7 +119,7 @@ div .benefits {
 
 		h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong
 		{
-			color: #333;
+			color: #666;
 		}
 		
 		h2
@@ -640,8 +640,14 @@ div .benefits {
 			left: 0;
 			bottom: 0;
 			width: 100%;
+
 		}
 
+            h4 {
+                font-weight: normal;
+                font-size: 0.8em;
+                text-align: center;
+            }
 		#header .icons
 		{
 			font-size: 0.8em;

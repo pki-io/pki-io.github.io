@@ -65,11 +65,11 @@
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Welcome</span></a></li>
 								<li><a href="#release" id="release-link" class="skel-layers-ignoreHref"><span class="icon fa-flag">Release 1</span></a></li>
 								<li><a href="#benefits" id="benefits-link" class="skel-layers-ignoreHref"><span class="icon fa-heart">Benefits</span></a></li>
+								<li><a href="#howitworks" id="howitworks-link" class="skel-layers-ignoreHref"><span class="icon fa-gears">How it works</span></a></li>
 								<li><a href="#gettingstarted" id="gettingstarted-link" class="skel-layers-ignoreHref"><span class="icon fa-coffee">Getting started</span></a></li>
 								<li><a href="#downloads" id="downloads-link" class="skel-layers-ignoreHref"><span class="icon fa-download">Downloads</span></a></li>
 								<li><a href="#documentation" id="documentation-link" class="skel-layers-ignoreHref"><span class="icon fa-align-left">Documentation</span></a></li>
 								<li><a href="#security" id="security-link" class="skel-layers-ignoreHref"><span class="icon fa-bug">Security</span></a></li>
-								<li><a href="#howitworks" id="howitworks-link" class="skel-layers-ignoreHref"><span class="icon fa-gears">How it works</span></a></li>
 								<li><a href="#community" id="community-link" class="skel-layers-ignoreHref"><span class="icon fa-users">Community &amp; Support</span></a></li>
 							</ul>
 						</nav>
@@ -77,7 +77,7 @@
 				</div>
 				
 				<div class="bottom">
-
+                        <h4><strong><a href="mailto:security@pki.io">security@pki.io</a></strong></h4>
 					<!-- Social Icons -->
 						<ul class="icons">
 							<li><a href="https://twitter.com/home?status=http://pki.io%20-%20Scalable%20,%20open%20source%20X.509%20certificate%20management." class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -322,7 +322,7 @@
 						<div class="container">
 					
                             <header>
-                            <h1 class="center">pki.io is an open source project that aims to make managing and deploying X.509 certificates easy and scalable.</h1>
+                            <h1 class="center">pki.io is an open source project that makes managing and deploying X.509 certificates easy and scalable</h1>
                             </header>
 
 							<header>
@@ -331,9 +331,9 @@
 							
                             <p>We are excited to announce the first alpha release of pki.io.</p>
 
-                            <p>Release 1 allows you to work in the offline mode, creating CAs and certificates with ease. While already useful, we advise against using this release in production. We are working on Release 2, which will allow you to remotely generate keys on the servers over SSH. For more on future releases, see the <a href="https://github.com/pki-io/pki-io/wiki/Road-Map">Roadmap</a> wiki page.</p>
+                            <p>Release 1 allows you to work in the offline mode, creating CAs and certificates with ease. While already useful, we advise against using this release in production. We are now working on Release 2, which will allow you to remotely generate keys on the servers over SSH. For more on future releases, see the <a href="https://github.com/pki-io/pki-io/wiki/Road-Map">Roadmap</a>.</p>
 
-                           <p>Protecting your internal traffic is essential, whether for compliance or simply following security best practices. With pki.io you can easily manage certificates for internal infrastructure traffic, SSL and IPSec VPN connections, intranet and operations services, as well as implement X.509 mutual authentication.</p>
+                           <p>Protecting your internal traffic is essential, whether for compliance or simply following security best practices. With pki.io you can easily manage certificates for internal infrastructure traffic, SSL and IPSec VPN connections, intranet and operations services, as well as implementing X.509 mutual authentication.</p>
 
                             <p class="center"><img src="/images/without-with.png"/></p>
 
@@ -348,7 +348,7 @@
                             <li>There are bugs</li>
                             <li>Important features are missing</li>
                             <li>Documentation is minimal</li>
-                            <li>Threat modelling has only just begun</li>
+                            <li>Documented threat modelling only just begun</li>
                             <li>No signed packages yet</li>
                         </ul>
 						</div>
@@ -363,21 +363,6 @@
 								<h2>Benefits</h2>
 							</header>
 
-
-                        <div class="row center benefits">
-                            <div class="4u">
-                                <div class="logo entypo-download"></div>
-                                <p class="step-text">Install the agent on your servers. Use tags to identify running services.</p>
-                            </div>
-                            <div class="4u">
-                                <div class="logo entypo-lock"></div>
-                                <p class="step-text">Create as many CAs as you need, for example one for each tagged service.</p>
-                            </div>
-                            <div class="4u">
-                                <div class="logo entypo-flow-tree"></div>
-                                <p class="step-text">Automatically sign and distribute certificates to your servers.</p>
-                            </div>
-                        </div>
 
                             <h3>Improve security</h3>
                             <p>Deploy TLS by reusing existing trust relationships.</p>
@@ -425,8 +410,35 @@ Exporting
 						</div>
 					</section>
 			
+                    <section id="howitworks" class="two">
+                        <div class="container">
+                                <header>
+                                    <h2>How it works</h2>
+                                    <p class="center">(Version 1.0 when released)</p>
+                                </header>
+
+                        <div class="row center benefits">
+                            <div class="4u">
+                                <div class="logo entypo-download"></div>
+                                <p class="step-text">Install the agent on your servers. Use tags to identify running services.</p>
+                            </div>
+                            <div class="4u">
+                                <div class="logo entypo-lock"></div>
+                                <p class="step-text">Create as many CAs as you need, for example one for each tagged service.</p>
+                            </div>
+                            <div class="4u">
+                                <div class="logo entypo-flow-tree"></div>
+                                <p class="step-text">Automatically sign and distribute certificates to your servers.</p>
+                            </div>
+                        </div>
+
+                        <p>For more details, see the <a href="">Architecture</a> page.</p>
+
+                        </div>
+                    </section>
+
                     <!-- Getting started -->
-                    <section id="gettingstarted" class="two">
+                    <section id="gettingstarted" class="three">
                         <div class="container">
                             <header><h2>Getting started</h2></header>
 
@@ -594,7 +606,7 @@ notAfter=Jul  5 08:20:48 2015 GMT
 
 				<!-- Downloads -->
                 <!-- <i class="icon-mfizz"></i>  -->
-					<section id="downloads" class="three">
+					<section id="downloads" class="two">
 						<div class="container">
 
 							<header>
@@ -610,15 +622,15 @@ notAfter=Jul  5 08:20:48 2015 GMT
                                     </div>
                                     <div class="3u">
                                         <i class="logo icon-ubuntu"></i>
-                                        <p>Linux Deb<br/><a href="">32-bit</a> | <a href="">64-bit</a></p>
+                                        <p>Linux Deb<br/><a href=""><a href="">64-bit</a></p>
                                     </div>
                                     <div class="3u">
                                         <i class="logo icon-redhat"></i>
-                                        <p>Linux RPM<br/><a href="">32-bit</a> | <a href="">64-bit</a></p>
+                                        <p>Linux RPM<br/><a href=""><a href="">64-bit</a></p>
                                     </div>
                                     <div class="3u">
                                         <i class="logo icon-freebsd"></i>
-                                        <p>FreeBSD<br/><a href="">32-bit</a> | <a href="">64-bit</a></p>
+                                        <p>FreeBSD<br/><a href=""><a href="">64-bit</a></p>
                                     </div>
                                 </div>
 
@@ -628,12 +640,12 @@ notAfter=Jul  5 08:20:48 2015 GMT
 					</section>
 
                     <!-- Documentation -->
-                    <section id="documentation" class="two">
+                    <section id="documentation" class="three">
                         <div class="container">
                             <header><h2>Documentation</h2></header>
 
                             <p>Further documentation can be found on <a href="https://github.com/pki-io/pki-io">GitHub</a>.</p>
-                            <p>Wiki guides available include:</p>
+                            <p>Guides available include:</p>
                             <ul class="default">
                                     <li><a href="https://github.com/pki-io/admin">Building from source</a></li>
                                     <li><a href="https://github.com/pki-io/pki-io/wiki/Multi-admin-example">Multiple admins using Git</a></li>
@@ -642,7 +654,7 @@ notAfter=Jul  5 08:20:48 2015 GMT
                     </section>
 
                     <!-- Security -->
-                    <section id="security" class="three">
+                    <section id="security" class="two">
                         <div class="container">
                             <header><h2>Security</h2></header>
 
@@ -691,28 +703,7 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
                             <p>The generated report can be found here: <a href="https://github.com/pki-io/docs/wiki/ThreatSpec-TMv0.1">ThreatSpec-TMv0.1</a></p>
 
                             <header><h3>Other documents</h3></header>
-                            <p>Other security related documentation can be found on the wiki.</p>
-                        </div>
-                    </section>
-
-                    <section id="howitworks" class="two">
-                        <div class="container">
-                            <header><h2>How it works</h2></header>
-                            <p class="center">
-                                <img src="/images/basics.png"/>
-                            </p>
-
-                            <p class="center"><img src="/images/architecture_overview.png"/></p>
-
-                            <p>pki.io is made up of three main components. The agent that runs on client servers; admin users or an admin service; and an API service that glues everything together. The client agent is responsible for generating and uploading CSRs as well as downloading and deploying the certs. Admins can either be users or an admin service, and they look after the CAs and sign certs etc. All connections from the agents and admins are outbound to the API service which acts as temporary and persistent data storage. The API service and admin service are run active-active for High Availability.</p>
-                            <p class="center"><img src="/images/simple_service_hierarchy.png"></p>
-
-                            <p>The simplest way to use pki.io is using service CAs. For each service in your environment (e.g. web, database, vpn) you create a root CA which signs all client certificates. Each service CA private key is encrypted and signed by the Org entity. This protects the private data and only allows Org administrators to manage and use the CA. Using service CAs means we don't have to worry about CRLs or OCSP. In the event of a client compromise we can rotate out the CA keys, and regenerate and distribute all client certificates. A Root entity (coming in Release 2) is used to sign the Org entity keys and has its own private keys stored off line. In the event that the Org is compromised, it can be regenerated using the Root entity.</p>
-
-                            <p class="center"><img src="/images/service_hierarchy.png"></p>
-
-                            <p>pki.io also supports a more traditional approach to X.509. It still has a Root and Org entity. It can even have sub entities that still use service CAs (WebOps in the diagram). But in addition to this there is a org-level root CA. This is used to sign any required sub-CAs. In the example diagram there is a HR CA that is used to sign client certificates using add-on SCEP and OCSP services. This approach supports having administrators at different levels which helps isolate impact in the event of an admin compromise.</p>
-
+                            <p>Other security related documentation can be found on the <a href="https://github.com/pki-io/pki-io/wiki">wiki</a>.</p>
                         </div>
                     </section>
 
@@ -720,31 +711,35 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
                         <div class="container">
                             <header><h2>Community &amp; Support</h2></header>
 
-                            <p>If you're having a problem and need some help, get in touch:</p>
-                            <ul class="default">
-                                <li><a href="https://gitter.im/pki-io/pki-io?">Gitter Chat</a></li>
-                                <li>#pki.io on FreeNode</li>
-                                <li>Post to the <a href="https://groups.google.com/forum/#!forum/pki_io">mailing list</a></li>
-                                <li>Drop an email to <a href="mailto:hello@pki.io">hello@pki.io</a></li>
-                                <li>Tweet us at <a href="https://twitter.com/pki_io">@pki_io</a></li>
-                            </ul>
+                            <div class="center"><img src="/images/pki-heart-prs-small.png"/></div>
 
-                            <p class="center"><img src="/images/pki-heart-prs-small.png"/></p>
-                            <header><h3>We need your help</h3></header>
-                            <p>Here is a list of things you could possibly help us with:</p>
-                            <ul class="default">
-                                <li>Development</li>
-                                <li>Code audit</li>
-                                <li>Security testing</li>
-                                <li>Documentation writing</li>
-                                <li>Threat modelling</li>
-                                <li>Site design and copy</li>
-                            </ul>
+                            <div class="row">
+                                <div class="6u">
+                                    <header><h3>Get in touch</h3></header>
+                                    <ul class="default">
+                                        <li><a href="https://gitter.im/pki-io/pki-io?">Gitter Chat</a></li>
+                                        <li>#pki.io on FreeNode</li>
+                                        <li>Post to the <a href="https://groups.google.com/forum/#!forum/pki_io">mailing list</a></li>
+                                        <li>Drop an email to <a href="mailto:hello@pki.io">hello@pki.io</a></li>
+                                        <li>Tweet us at <a href="https://twitter.com/pki_io">@pki_io</a></li>
+                                    </ul>
+                                </div>
+                                <div class="6u">
+                                    <header><h3>We need your help</h3></header>
+                                    <ul class="default">
+                                        <li>Development</li>
+                                        <li>Code audit</li>
+                                        <li>Security testing</li>
+                                        <li>Documentation writing</li>
+                                        <li>Threat modelling</li>
+                                        <li>Site design and copy</li>
+                                    </ul>
 
-                            <header><h4>... or just tell us what you think :)</h4></header>
+                                    <header><h4>... or just tell us what you think :)</h4></header>
+                                </div>
+                            </div>
 
-                            <p>The source code is available on <a href="https://github.com/pki-io/pki-io">GitHub</a>.</p>
-
+                                    <p>The source code is available on <a href="https://github.com/pki-io/pki-io">GitHub</a>.</p>
                         </div>
                     </section>
 			</div>
