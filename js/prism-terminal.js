@@ -1,9 +1,9 @@
 Prism.languages.terminal = {
     'prompt': {
-        pattern: /(\[.*?\][#$]).*\n/,
+        pattern: /(\[.+?\][#$] ).*?(?:\\\n.*?)*\n/,
         inside: {
             'command': {
-                pattern: /(\[.+?\][#$] )(.*)\n/,
+                pattern: /(\[.+?\][#$] )(.*?(?:\\\n.*?)*)\n/,
                 lookbehind: true
              }
          }

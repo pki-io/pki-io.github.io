@@ -385,7 +385,9 @@ Manages Certificate Authorities
 
 Usage:
   pki.io ca [--help]
-  pki.io ca new &lt;name&gt; --tags &lt;tags&gt; [--ca-expiry &lt;days&gt;] [--cert-expiry &lt;days&gt;] [--dn-l &lt;locality&gt;] [--dn-st &lt;state&gt;] [--dn-o &lt;org&gt;] [--dn-ou &lt;orgUnit&gt;] [--dn-c &lt;country&gt;] [--dn-street &lt;street&gt;] [--dn-postal &lt;postalCode&gt;]
+  pki.io ca new &lt;name&gt; --tags &lt;tags&gt; [--ca-expiry &lt;days&gt;] [--cert-expiry &lt;days&gt;] \
+      [--dn-l &lt;locality&gt;] [--dn-st &lt;state&gt;] [--dn-o &lt;org&gt;] [--dn-ou &lt;orgUnit&gt;] \
+      [--dn-c &lt;country&gt;] [--dn-street &lt;street&gt;] [--dn-postal &lt;postalCode&gt;]
   pki.io ca list
   pki.io ca delete &lt;name&gt; --confirm-delete &lt;reason&gt;
 </code></pre></p>
@@ -393,7 +395,8 @@ Usage:
                             <h3>Keep growing</h3>
                             <p>Scales with you, from one server to thousands, from startups to enterprises.</p>
                             <p><pre><code class="language-terminal">
-[admin@localhost my-org]$ pki.io node cert --name web01 --tags web --export - | ssh web01 'tar zxvf - -C /opt/pki.io'
+[admin@localhost my-org]$ pki.io node cert --name web01 --tags web \
+    --export - | ssh web01 'tar zxvf - -C /opt/pki.io'
 Loading admin app
 Loading admin entity
 Loading org entity
@@ -472,7 +475,8 @@ Saving org public entity to home
 
                             <p>First, lets create a CA.</p>
 <p><pre><code class="language-terminal">
-[admin@localhost my-org]$ pki.io ca new web-root --tags web --dn-o pki.io --dn-ou webops
+[admin@localhost my-org]$ pki.io ca new web-root --tags web \
+    --dn-o pki.io --dn-ou webops
 Loading admin app
 Loading admin entity
 Loading org entity
@@ -484,7 +488,8 @@ Updating index
 
                             <p>Now we can create a standalone certificate.</p>
 <p><pre><code class="language-terminal">
-[admin@localhost my-org]$ pki.io cert new test-web-1 --export test1.tar.gz --expiry 60 --ca web-root --dn-o pki.io --dn-ou web-test
+[admin@localhost my-org]$ pki.io cert new test-web-1 --export test1.tar.gz \
+    --expiry 60 --ca web-root --dn-o pki.io --dn-ou web-test
 Loading admin app
 Loading admin entity
 Loading org entity
@@ -502,7 +507,8 @@ test-web-1-key.pem
 </code></pre></p>
                             <p>We can extract the certificate to stdout, and pass it straight to openssl to take a look.</p>
 <p><pre><code class="language-terminal">
-[admin@localhost my-org]$ tar -zxOf test1.tar.gz test-web-1-cert.pem | openssl x509 -noout -subject -issuer -startdate -enddate
+[admin@localhost my-org]$ tar -zxOf test1.tar.gz test-web-1-cert.pem | \
+    openssl x509 -noout -subject -issuer -startdate -enddate
 subject= /O=pki.io/OU=web-test/CN=test-web-1
 issuer= /O=pki.io/OU=webops/CN=web-root
 notBefore=Apr  6 08:18:37 2015 GMT
@@ -528,7 +534,8 @@ Pairing key: 4eb44b2911fcbb7a40ba2d012c0bfaaf
                             <p>The pairing key must be kept secret, so it should be distributed over an existing trusted channel. Because we're working in the offline mode, we don't need to distribute it, but we do need to refer to it when creating the node.</p>
 
 <p><pre><code class="language-terminal">
-[admin@localhost my-org]$ pki.io node new web01 --pairing-id 70ddaa68f47de74fe04f308ada6c8db1 --pairing-key 4eb44b2911fcbb7a40ba2d012c0bfaaf
+[admin@localhost my-org]$ pki.io node new web01 --pairing-id 70ddaa68f47de74fe04f308ada6c8db1 \
+    --pairing-key 4eb44b2911fcbb7a40ba2d012c0bfaaf
 Loading admin app
 Loading admin entity
 Loading org entity
@@ -587,7 +594,8 @@ Saving node index
                             <p>The node has now processed the certificate, so we can take a look at it.</p>
 
 <p><pre><code class="language-terminal">
-[admin@localhost my-org]$ pki.io node cert --name web01 --tags web --export - | tar -zxOf - web01-cert.pem | openssl x509 -noout -subject -issuer -startdate -enddate
+[admin@localhost my-org]$ pki.io node cert --name web01 --tags web --export - | \
+    tar -zxOf - web01-cert.pem | openssl x509 -noout -subject -issuer -startdate -enddate
 Loading admin app
 Loading admin entity
 Loading org entity
