@@ -17,7 +17,6 @@
 div .logo {
   font-size: 4em;
   color: #27ae60;
-  padding-bottom: 50px;
 }
 
 div .downloads {
@@ -42,6 +41,10 @@ div .benefits {
 @font-face {
     font-family: pki-old;
     src: url(/fonts/Ash.ttf);
+}
+
+p a {
+  color: #27ae60;
 }
 
 /*********************************************************************************/

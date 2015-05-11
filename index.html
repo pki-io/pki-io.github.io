@@ -623,29 +623,68 @@ notAfter=Jul  5 08:20:48 2015 GMT
 								<h2>Downloads</h2>
 							</header>
 
-                            <p>pki.io is available as source code, pre-built binaries and as packages for various platforms. It has been tested on Debian, OSX and FreeBSD.</p>
+                            <p>pki.io is available as source code, pre-built binaries and as packages for various platforms. It has been tested on Debian, CentOS, OS X and FreeBSD.</p>
 
                                 <div class="row center downloads">
-                                    <div class="3u">
+                                    <div class="4u">
                                         <i class="logo icon-osx"></i>
-                                        <p>Mac OS X<br/><a href="">tar.gz</a></p>
+                                        <p>Mac OS X 64-bit<br/>
+                                          <a href="">tar.gz</a>
+                                        </p>
                                     </div>
-                                    <div class="3u">
-                                        <i class="logo icon-ubuntu"></i>
-                                        <p>Linux Deb<br/><a href=""><a href="">64-bit</a></p>
+                                    <div class="4u">
+                                      <i class="logo fa fa-linux"></i>
+                                      <p>Linux 64-bit<br/>
+                                        <a href="">deb</a><br/>
+                                        <a href="">rpm</a><br/>
+                                        <a href="">tar.gz</a>
+                                      </p>
                                     </div>
-                                    <div class="3u">
-                                        <i class="logo icon-redhat"></i>
-                                        <p>Linux RPM<br/><a href=""><a href="">64-bit</a></p>
-                                    </div>
-                                    <div class="3u">
+                                    <div class="4u">
                                         <i class="logo icon-freebsd"></i>
-                                        <p>FreeBSD<br/><a href=""><a href="">64-bit</a></p>
+                                        <p>FreeBSD 64-bit<br/>
+                                          <a href="">tar.gz</a>
+                                        </p>
                                     </div>
                                 </div>
 
 
-                                <p>All other downloads are available on <a href="">GitHub</a>, as is the <a href="https://github.com/pki-io/pki-io">source code</a>.</p>
+                                <p>Checksums and all other downloads are available on <a href="">GitHub</a>, as is the <a href="https://github.com/pki-io/pki-io">source code</a>.</p>
+
+
+                                <h3>Linux package installation</h3>
+<p><pre><code class="language-terminal">
+[admin@localhost ~]$ wget 
+[admin@localhost ~]$ wget 
+[admin@localhost ~]$ sha256sum -c pki.io_0.1.0-release1_amd64.deb-sha256sum
+./pki.io_0.1.0-release1_amd64.deb: OK
+[admin@localhost ~]$ sudo dpkg -i pki.io_0.1.0-release1_amd64.deb
+[admin@localhost ~]$ sudo ln -s /opt/pki.io/bin/pki.io /usr/local/bin
+</code></pre></p>
+                                <p>Use <em>rpm -i</em> for the RPM.</p>
+
+                                <h3>Linux tar.gz installation</h3>
+<p><pre><code class="language-terminal">
+[admin@localhost ~]$ wget 
+[admin@localhost ~]$ wget 
+[admin@localhost ~]$ sha256sum -c pki.io_0.1.0-release1_linux_amd64.tar.gz-sha256sum
+./pki.io_0.1.0-release1_linux_amd64.tar.gz: OK
+[admin@localhost ~]$ sudo tar zxvf pki.io_0.1.0-release1_linux_amd64.tar.gz -C /opt/
+[admin@localhost ~]$ sudo ln -s /opt/pki.io/bin/pki.io /usr/local/bin/
+</code></pre></p>
+                                <p>No sudo? tar into your home directory instead.</p>
+
+                                <h3>Other tar.gz installation</h3>
+<p><pre><code class="language-terminal">
+[admin@localhost ~]$ wget 
+[admin@localhost ~]$ wget 
+[admin@localhost ~]$ sha256sum -c pki.io_0.1.0-release1_darwin_amd64.tar.gz-sha256sum
+./pki.io_0.1.0-release1_darwin_amd64.tar.gz: OK
+[admin@localhost ~]$ sudo tar zxvf pki.io_0.1.0-release1_darwin_amd64.tar.gz -C /usr/local/
+[admin@localhost ~]$ sudo ln -s /usr/local/pki.io/bin/pki.io /usr/local/bin/
+</code></pre></p>
+                                <p>Also applies to FreeBSD.</p>
+
 						</div>
 					</section>
 
