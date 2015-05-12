@@ -19,6 +19,12 @@ div .logo {
   color: #27ae60;
 }
 
+div .logo-pad {
+  font-size: 4em;
+  color: #27ae60;
+  padding-bottom: 50px;
+}
+
 div .downloads {
   padding-top: 50px;
   padding-bottom: 50px;

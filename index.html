@@ -422,15 +422,15 @@ Exporting
 
                         <div class="row center benefits">
                             <div class="4u">
-                                <div class="logo entypo-download"></div>
+                                <div class="logo-pad entypo-download"></div>
                                 <p class="step-text">Install the agent on your servers. Use tags to identify running services.</p>
                             </div>
                             <div class="4u">
-                                <div class="logo entypo-lock"></div>
+                                <div class="logo-pad entypo-lock"></div>
                                 <p class="step-text">Create as many CAs as you need, for example one for each tagged service.</p>
                             </div>
                             <div class="4u">
-                                <div class="logo entypo-flow-tree"></div>
+                                <div class="logo-pad entypo-flow-tree"></div>
                                 <p class="step-text">Automatically sign and distribute certificates to your servers.</p>
                             </div>
                         </div>
@@ -451,9 +451,10 @@ Exporting
                             <p>In this example, we're going to install the pre-built binary for Linux. You can download distro packages and binaries for other platforms from the <a href="#downloads">Downloads</a> section.</p>
 <p><pre><code class="language-terminal">
 [admin@localhost ~]$ wget https://...
-[admin@localhost ~]$ gpg ...
-[admin@localhost ~]$ sudo tar zxvf pki.io-0.1.0-linux-amd64.tar.gz -C /opt/pki.io
-[admin@localhost ~]$ sudo ln -s /opt/pki.io/bin/pki.io /usr/local/bin
+[admin@localhost ~]$ wget https://...
+[admin@localhost ~]$ sha256sum -c ...
+[admin@localhost ~]$ sudo tar zxvf pki.io-0.1.0-linux-amd64.tar.gz -C /opt/
+[admin@localhost ~]$ sudo ln -s /opt/pki.io/bin/pki.io /usr/local/bin/
 </code></pre></p>
                             <h3>Create an organisation</h3>
                             <p>pki.io organises everything by Organisation, referred to here as Org. You might have an Org for your whole organisation, or different independent teams might manage their own Orgs. All commands are run inside an Org directory, so lets create an one.
@@ -488,15 +489,15 @@ Updating index
 
                             <p>Now we can create a standalone certificate.</p>
 <p><pre><code class="language-terminal">
-[admin@localhost my-org]$ pki.io cert new test-web-1 --export test1.tar.gz \
-    --expiry 60 --ca web-root --dn-o pki.io --dn-ou web-test
+[admin@localhost my-org]$ pki.io cert new test-web-1 --expiry 60 --ca web-root \
+    --dn-o pki.io --dn-ou web-test --export test1.tar.gz
 Loading admin app
 Loading admin entity
 Loading org entity
 Export to 'test1.tar.gz'
 </code></pre></p>
 
-                            <p>We called the certificate test-web-1, so that is what the Common Name will be set to. As standalone certs aren't tracked, they must be exported. We set an expiry of 60 days instead of the default 90 days. We then specified the CA that should sign it. Finally, we also specified DN values, but we used a different value for organisational unit. Here we used web-test, whereas the CA is webops.
+                            <p>We called the certificate test-web-1, so that is what the Common Name will be set to. We set an expiry of 60 days instead of the default 90 days. We then specified the CA that should sign it. We also specified DN values, but we set a different organisational unit than we did for the CA. Here we used web-test, whereas the CA is webops. Finally, as standalone certs aren't tracked, they must be exported.
 
                             <p>We can now see  what files we've got by looking at the exported file.</p>
 <p><pre><code class="language-terminal">
@@ -517,7 +518,7 @@ notAfter=Jun  5 08:18:37 2015 GMT
 
                             <p>As you can see, the subject includes the DN elements specified, which differ slightly from the CA.</p>
                             <h3>Node over SSH</h3>
-                            <p>You will eventually be able to run pki.io as service with agents running on servers or nodes. In the meantime, pki.io supports an offline mode that tracks nodes and certificates and lets you export files. You can then distribute these files yourself. This is also useful for platforms that cannot run an agent, for example resource limited embedded systems.</p>
+                            <p>You will eventually be able to run pki.io as service with agents running on servers etc, referred to as nodes. In the meantime, pki.io supports an offline mode that tracks nodes and certificates and lets you export files. You can then distribute these files yourself. This is also useful for platforms that cannot run an agent, for example resource limited embedded systems.</p>
                             <p>Before we can create a node, we need to create a pairing key. We will associate it with the <strong>web</strong> tag, which means in our case that it will be associated with the web-root CA.</p>
                             <p>Creating a node in the offline mode follows the same flow as it does when running a full API service.</p>
 <p><pre><code class="language-terminal">
@@ -767,7 +768,7 @@ func ExpandKey(key, salt []byte) ([]byte, []byte, error) {
                                     <header><h3>Get in touch</h3></header>
                                     <ul class="default">
                                         <li><a href="https://gitter.im/pki-io/pki-io?">Gitter Chat</a></li>
-                                        <li>#pki.io on FreeNode</li>
+                                        <li>#pki.io on Freenode</li>
                                         <li>Post to the <a href="https://groups.google.com/forum/#!forum/pki_io">mailing list</a></li>
                                         <li>Drop an email to <a href="mailto:hello@pki.io">hello@pki.io</a></li>
                                         <li>Tweet us at <a href="https://twitter.com/pki_io">@pki_io</a></li>
