@@ -396,7 +396,7 @@ Usage:
                             <p>Scales with you, from one server to thousands, from startups to enterprises.</p>
                             <p><pre><code class="language-terminal">
 [admin@localhost my-org]$ pki.io node cert --name web01 --tags web \
-    --export - | ssh web01 'tar zxvf - -C /opt/pki.io'
+    --export - | ssh web01 'mkdir pki.io && tar zxvf - -C pki.io/'
 Loading admin app
 Loading admin entity
 Loading org entity
@@ -519,7 +519,7 @@ notAfter=Jun  5 08:18:37 2015 GMT
                             <p>As you can see, the subject includes the DN elements specified, which differ slightly from the CA.</p>
                             <h3>Node over SSH</h3>
                             <p>You will eventually be able to run pki.io as service with agents running on servers etc, referred to as nodes. In the meantime, pki.io supports an offline mode that tracks nodes and certificates and lets you export files. You can then distribute these files yourself. This is also useful for platforms that cannot run an agent, for example resource limited embedded systems.</p>
-                            <p>Before we can create a node, we need to create a pairing key. We will associate it with the <strong>web</strong> tag, which means in our case that it will be associated with the web-root CA.</p>
+                            <p>Before we can create a node, we need to create a pairing key, which allow nodes to auto-register within a defined scope. We will associate it with the <strong>web</strong> tag, which means in our case that it will be associated with the web-root CA.</p>
                             <p>Creating a node in the offline mode follows the same flow as it does when running a full API service.</p>
 <p><pre><code class="language-terminal">
 [admin@localhost my-org]$ pki.io pairing-key new --tags web
@@ -553,7 +553,7 @@ Generating CSRs
 </code></pre></p>
 
                             <p>We've created a node called web01 using the pairing id and key. The node generates encryption and signing keys, then pre-generates a batch of CSRs.</p>
-                            <p>At this point, the node has just created itself, but the Org doesn't know anything about it. We need the Org to get the node registration, verify it and sign CSRs as required.</p>
+                            <p>At this point, the node has just created itself, but the Org doesn't know anything about it. We need the Org to get the node registration, verify it and sign CSRs.</p>
 <p><pre><code class="language-terminal">
 [admin@localhost my-org]$ pki.io org run
 Loading admin app
@@ -612,6 +612,20 @@ notAfter=Jul  5 08:20:48 2015 GMT
 
                             <p>Once again, we specify the name of the node we're working with. We also provide the tag <strong>web</strong> to limit the certificates we want to export. You can see a list of tags for the node using the <em>pki.io node show</em> command.</p>
                             <p>You will also notice that the DN organisation and organisational unit for the certificate are the same as the CA's, and that the CN is the name of the node. This is because pki.io automatically scopes the DN to the CA, which prevents the node from choosing an arbitrary certificate subject.</p>
+
+                            <p>Finally, we can export the certificate and pipe it straight to an SSH connection to the node where we extract the files.</p>
+
+                            <p><pre><code class="language-terminal">
+[admin@localhost my-org]$ pki.io node cert --name web01 --tags web \
+    --export - | ssh web01 'mkdir pki.io && tar zxvf - -C pki.io/'
+Loading admin app
+Loading admin entity
+Loading org entity
+Loading node app
+Loading node index
+Getting certs for tag: web
+Exporting
+</code></pre></p>
                         </div>
                     </section>
 
