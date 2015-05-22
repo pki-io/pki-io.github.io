@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/pki
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://pki.io
+  * I am pki (https://keybase.io/pki) on keybase.
+  * I have a public key with fingerprint A26E 241B 765A 7631 72CF  1171 1988 9A6F EF48 C3D0
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "a26e241b765a763172cf117119889a6fef48c3d0",
+            "host": "keybase.io",
+            "key_id": "19889a6fef48c3d0",
+            "kid": "010197db2714714cfbac77d86123c9bc9c25a9a0d980f5ce4808a0777fbd1cf3f5690a",
+            "uid": "b74ba4621b223cd35b5c364d2b2c4619",
+            "username": "pki"
+        },
+        "service": {
+            "hostname": "pki.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1428576019,
+    "expire_in": 157680000,
+    "prev": "ce9ee57763bfd5933e89d8b910272836e6dcbd1b55347943d74a7deef5c06e25",
+    "seqno": 2,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMIOAnicbVJrSFRBGF1LTU3RUosVKpzAJFe7c19z79YPCVJES5RkoZLlzty5etnc
+XXevlohERhBGFIJoPzIoFHrRQ6IiydZHfwqjhz3tQVEWomIPSolsrhX9aRgY5nzn
+nJnzzQwmLXQkRK2Jtc60FG/Uom5HpDpHRZYntRHggN4A3I3AR+cXw/RX0VAwZPot
+4AYaL1NehBjJkoZkASKeGBAiCFVFUTXZoIaoEEHngAtUB8K2gtlgLUzzzADD2MZr
+6gz9D983X+AgB1WkYx5BkU1iYI0gpCsy5AWiYqISXtJUjdNVhTMkQkWFUzQOIWRg
+HRJDMCRZ5TRmVzdvh5GINVHmIeaZXhckLBFBFnUe80SUoWoTwzTk12ooYwd9Jmhy
+AQbUm4Ta6e0Q/4q/QwRDAStAAjsZVm1ZQbctsRqCNmcXxd4/ai82/TrrHRPU01DY
+DPiBGzImsUzbDoq8IiGZhXUBujtohqjXtBkMUzg27GNoPbMkVKVUQqzZ2NAlVRCo
+ouoKViHHI14RZCrrhEXHkiSISBUFHYka0illzeHYW0nAzlPrDwA3z66pVTHLsFnl
+16y6EAVN/Td3RDuiEhyxMQvs13ckxKf8/ROrZ+McXc3Rn5vvbfjeRo67x50TP3Lk
+6YGpJ/q7ypTO3KEPs8O1Ba374tv8L77G0yM9NU+7hS13u9MxN5kM1nYM50wXDWV5
+4+5nFi47GleeWbm8a+DNA+F1+mikZKLEZSaOnT2w39cqFD3cfKo90jGTsc7KTyWT
+SnLe+/Zy74nYY1f6v2kXybbFd3J6wZ7TnjljU0fP+ctjla+mVlas6FufNCbN9REx
+Mv72cEra9tGxjBt7YzqT0GPnuVv5zi9nXHFls4MdNHtkiVlcyBXCS2Ere9V11zWQ
+qy51Xj1U4Ut+VnIy1VyUKP38dGGkYMbZtNVTerBXKfvo6Xz08nl+mtXiLv0Ftvoa
+9g==
+=dZiz
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pki
+
+==================================================================
+
