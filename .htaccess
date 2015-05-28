@@ -2,5 +2,8 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC] 
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L] 
 
+RewriteCond %{HTTP_HOST} ^helpwanted\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://github.com/search?l=&q=user:pki-io+label:"help+wanted"&ref=advsearch&type=Issues&utf8=✓ [R=302,L]
+
 RewriteCond %{HTTPS} off 
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} 
